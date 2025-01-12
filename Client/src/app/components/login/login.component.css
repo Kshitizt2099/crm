@@ -1,0 +1,81 @@
+/* .left{
+    height: 100vh;
+    width:45%;
+    background: linear-gradient(135deg,green,white,lime);
+}
+
+.right{
+    height: 100%;
+    width: 55%;
+}
+
+.bg-light-secondary{
+    background-color: beige;
+}
+
+@media screen and (max-width:768px){
+
+    .bg-light-secondary{
+        background-color: darkblue;
+    }
+    /* .left{
+        display: none;
+     
+    }
+
+    
+
+    .right{
+        width: 100%;
+    } */
+
+    .cont{
+        background: linear-gradient(135deg,#bbf7d0,#4ade80,#22c55e);
+    }
+   .ips{
+    height:500px; width:500px
+   }
+   .title{
+    font-family: "Playwrite DK Uloopet", cursive;
+    font-optical-sizing: auto;
+    font-weight:100px;
+    font-style: normal;
+    
+  }
+ 
+@media (max-width:992px)
+{
+    .cont{
+        display:none;
+    }
+
+    .bgs{
+        background: linear-gradient(45deg,#d1fae5,#34d399,#10b981);
+    }
+
+     .name,.email,.pass{
+         width: 378px;
+     }
+     .ips{
+         background: white;
+     }
+    
+}
+
+@media (min-width:100px) and (max-width:407px)
+{
+    .ips{
+       height: 300px;
+       width: 100%;
+
+    }
+    .bgs{
+        width:100vw;
+        height:100vh
+    }
+.name,.email,.pass{
+      width: 200px;
+      margin-left: 100px;
+}
+}
+  

@@ -1,0 +1,122 @@
+<!-- 
+
+<div class="container-fluid position-relative" [ngStyle]="{height:'100vh',width:'100vw'}">
+
+
+
+
+     <div class="bg-light position-absolute create rounded-5 shadow-lg">
+
+
+        <div>
+        <input [(ngModel)]="name" class="w-96  p-2 border-b-2 border-b-gray-600 outline-none text-gray-500" placeholder="Enter your name">
+    </div>
+    <div class="absolute top-16 left-16">
+
+        <input  [(ngModel)]="phone"  class="w-96  p-2 border-b-2 border-b-gray-600 outline-none text-gray-500" placeholder="Enter your Phone number">
+    </div>
+    <div class="absolute top-32 left-16">
+
+        <input [(ngModel)]="email" class="w-96  p-2 border-b-2 border-b-gray-600 outline-none text-gray-500" placeholder="Enter your email">
+    </div>
+     <div class="absolute top-48 left-16">
+        <div class="flex flex-row relative">
+            <input [(ngModel)]="password" [type]="type?'text':'password'"  class="w-[385px] p-2 border-b-2 border-b-gray-600 outline-none text-gray-500" placeholder="Enter your password">
+            <img src="https://cdn-icons-png.flaticon.com/256/8275/8275674.png" class="h-8 w-8 absolute top-3 right-0" (click)="viewpass()">
+        </div>
+        <br/>
+        <div class="flex flex-row relative">
+            <input [(ngModel)]="confirmpassword"  [type]="type?'text':'password'"  class="w-[385px] p-2 border-b-2 border-b-gray-600 outline-none text-gray-500" placeholder="Enter your confirm password">
+            <img src="https://cdn-icons-png.flaticon.com/256/8275/8275674.png" class="h-8 w-8 absolute top-3 right-0" (click)="viewpass()">
+        </div>
+     </div>
+
+
+
+
+
+
+        <div class="absolute bottom-20 left-[120px]"> 
+            <button class="text-white w-64 bg-red-600 p-2 rounded-full text-danger" (click)="createAcc()">Create the Account</button>
+         </div>
+
+     </div>
+
+                   
+                   
+   
+               
+              
+               
+       
+            <ng-container *ngIf="error">
+               
+                   <div class="bg-red-400 text-red-900 p-2 w-64 rounded-xl mr-[150%] mt-5 text-center">
+                     {{error}}
+                   </div>
+                  </ng-container>
+            
+   
+       
+           
+           
+       
+        
+   
+   
+   </div> -->
+
+   <div class="container-fluid " style="height: 100vh;">
+    <div class="row h-100">
+      <div class=" col-1 col-sm-1 col-md-1 col-lg-7 bg-success h-100 cont rounded-end-5" >
+        
+      </div>
+      
+      <div class="col-lg-5 col-md-12 col-sm-12 col-12 mt-2 h-100 d-flex align-items-center justify-content-center bgs " [ngStyle]="{'backgroundColor':'white'}">
+          <div class="shadow-lg shadow d-flex flex-column rounded-5 align-items-center justify-content-center  ips position-relative" [ngStyle]="{height:'80%'}">
+            <div>
+              <input  [(ngModel)]="name" class="border-0 border-bottom border-dark border-bottom border-secondary  border name p-2 border-light mb-4 " [ngStyle]="{'outline' : 'none',width:'380px'}" placeholder="Enter your name">
+              <br/>
+              <input  class=" border-0 border-bottom border-dark email p-2 border-light mb-4"  [ngStyle]="{'outline' : 'none',width:'380px'}" placeholder="Enter your Phone" [(ngModel)]="phone">
+              <br/>
+
+              <input  class=" border-0 border-bottom border-dark email p-2 border-light mb-4"  [ngStyle]="{'outline' : 'none',width:'380px'}" placeholder="Enter your Email" [(ngModel)]="email">
+              <br/>
+              <div>
+                <div class="d-flex flex-row position-relative ">
+                  <input [(ngModel)]="password" [type]="type?'text':'password'"  class=" border-0 border-bottom border-dark p-2 border-light pass"  [ngStyle]="{'width':'380px','outline':'none'}" placeholder="Enter your password">
+                  <img src="https://cdn-icons-png.flaticon.com/256/8275/8275674.png" class=" position-absolute top-20 end-0 cursor-pointer" (click)="viewpass()" [ngStyle]="{'height':'32px','width':'32px','cursor': 'pointer'}">
+              </div>
+
+             
+              </div>
+
+              <div>
+                <div class="d-flex flex-row position-relative mt-lg-3 mt-3">
+                  <input [(ngModel)]="confirmpassword"  [type]="type?'text':'password'"  class=" border-0 border-bottom border-dark p-2 border-light pass"  [ngStyle]="{'width':'380px','outline':'none'}" placeholder="Enter your current password">
+                  <img src="https://cdn-icons-png.flaticon.com/256/8275/8275674.png" class=" position-absolute top-20 end-0 cursor-pointer" (click)="viewpass()" [ngStyle]="{'height':'32px','width':'32px','cursor': 'pointer'}">
+              </div>
+
+             
+              </div>
+  
+  
+            </div>
+  
+         
+  
+            <div class="">
+  
+            </div>
+          
+           
+            <button  [ngStyle]="{backgroundColor:'#4ade80', color:'white', width:'60%',marginTop:'10%'}" class="border-0 p-2 rounded-5 mt-md-5" (click)="createAcc()">Create</button>
+             <ng-container *ngIf="error">
+              <div class="position-absolute text-danger"  style="bottom:10% ;"  >{{error}}</div>
+             </ng-container>
+           
+          </div>
+      </div>
+    </div>
+  
+  </div>

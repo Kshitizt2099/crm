@@ -1,0 +1,26 @@
+.bg-background{
+    /* background: linear-gradient(to right,red ,white , tomato); */
+    height: 100vh;
+
+}
+
+.child{
+    top:10%;
+    height: 60%;
+    width: 70%;
+    left: 15%;
+
+}
+.chosen{
+    position:absolute;
+   
+    bottom: 25%;
+}
+
+.err{
+    position: absolute;
+    bottom: -30%;
+    width: 70%;
+    padding: 1%;
+    text-align: center;
+}

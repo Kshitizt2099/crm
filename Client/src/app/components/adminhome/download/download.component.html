@@ -1,0 +1,38 @@
+
+<div class="bg-background container-fluid position-relative">
+   
+    <div class="bg-light position-absolute  child rounded-5 " [ngStyle]="{'box-shadow': '0 4px 8px rgba(0, 0, 0, 0.2)'}">
+       <div class="h-75 container-fluid position-relative rounded-top-5">
+           <div class="bg-light position-absolute start-0 top-0 end-0 bottom-0 d-flex flex-column justify-content-center align-items-center  rounded-top-5">
+             <img src="https://cdn-icons-png.flaticon.com/256/10009/10009249.png" class="img-fluid rounded-top-5" [ngStyle]="{'height':'50%'}" >
+            
+             <br/>
+             <br/>
+             <button class="bg-info rounded-5 position-absolute" [disabled]="err" (click)="download()" [ngStyle]="{width:'240px',top:'85%'}">
+                Download Ticket Report
+             </button>
+           
+
+            <ng-container *ngIf="err">
+               <div class="alert alert-danger err">
+                 {{err}}
+               </div>
+              </ng-container>
+   
+   
+              <ng-container *ngIf="downloaded">
+               <div class="alert alert-success err">
+                 Ticket data downloaded
+               </div>
+              </ng-container>
+             <div >
+
+             </div>
+           </div>
+         </div>
+         
+         
+        </div>
+      
+  
+</div>

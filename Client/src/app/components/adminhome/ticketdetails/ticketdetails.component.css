@@ -1,0 +1,36 @@
+.main{
+    height: 70%;
+    width: 50%;
+    min-width: 400px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .star {
+     
+      clip-path: polygon(
+        50% 0%,
+        61% 35%,
+        98% 35%,
+        68% 57%,
+        79% 91%,
+        50% 70%,
+        21% 91%,
+        32% 57%,
+        2% 35%,
+        39% 35%
+      );
+    }
+  
+    @media (max-width:992px) {
+        .main{
+             display: flex;
+             flex-direction: column;
+             width:100px !important;
+        }
+  
+        .col{
+            width: 100% !important;
+        }
+    }

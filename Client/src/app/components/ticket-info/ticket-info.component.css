@@ -1,0 +1,39 @@
+.custom{
+    width: 40%;
+}
+
+.outline{
+    outline: none;
+}
+.services{
+    left:35%
+}
+.mb{
+    left:23%
+}
+@media (max-width:1000px)
+{
+    .services{
+        left:30%
+
+    }
+    
+}
+@media (max-width:1200px)
+{
+    .mb{
+        left: 15%;
+    }
+}
+
+@media (max-width:768px)
+{
+    .services{
+        left:30%
+
+    }
+    .mb{
+        left:0%
+    }
+    
+}

@@ -1,0 +1,98 @@
+ <app-navbar></app-navbar>
+<!--
+<div class="container-fluid bg-dark d-flex flex-column align-items-center justify-content-center" style="height: 100vh;">
+    <div  class="conts h-100 w-100">
+        <div class="bg-danger-subtle position-relative conts" >
+  
+            <select [(ngModel)]="currtype" (ngModelChange)="changeType($event)" class="position-absolute rounded-5 outline:none " style="width: 80%; height: 40px; left: 8%; top: 25%;">
+                <option *ngFor="let type of types">
+                    {{type}}
+                </option>
+            </select>
+            <select [(ngModel)]="currcategory"  class="position-absolute rounded-5 outline:none" style="width: 80%; height: 40px; left: 8%; top: 45%;">
+                <option *ngFor="let cat of categories">
+                    {{cat}}
+                </option>
+            </select>
+           </div>
+           <div class="bg-warning d-flex conts flex-column justify-content-center align-items-center" >
+           
+               
+                <textarea class="h-75 w-75 bg-primary-subtle rounded-5" placeholder="Enter desc">
+               
+                </textarea>
+        
+           
+          
+        </div>
+
+    </div>
+    <div class="bg-success h-100 w-100">
+     dfd
+    </div>
+  
+
+
+</div> -->
+<div class="container-fluid d-flex justify-content-center align-items-center position-relative bg-update" style="height: 100vh;">
+       <div class="position-absolute h-25 w-100   z-0 top-0 d-flex flex-column justify-content-center align-items-center mobiletitle">
+           <div class="d-flex flex-row  w-25 ">
+               <div class="h-100 w-50 d-flex justify-content-end align-items-center ">
+                <span class="update text-nowrap"><b>Update the</b></span>
+               </div>
+             <div>
+                <h1 [ngStyle]="{color:'#F97316'}" class="title">Ticket</h1>
+             </div>
+            
+           </div>
+       </div>
+  
+    <div class="cont shadow-lg d-flex flex-column z-1 rounded-5">
+      <div class="main rounded-top-5 bg-white shadow-lg">
+        <div class=" position-relative conts p-5" >
+  
+            <select [(ngModel)]="currtype" (ngModelChange)="changeType($event)" class="rounded-5 shadow-lg" style="width: 80%; height: 40px;  margin-bottom: 15%;">
+                <option *ngFor="let type of types">
+                    {{type}}
+                </option>
+            </select>
+            <select [(ngModel)]="currcategory"  class="rounded-5 outline:none shadow-lg" style="width: 80%; height: 40px;">
+                <option *ngFor="let cat of categories">
+                    {{cat}}
+                </option>
+            </select>
+           </div>
+           <div class=" d-flex conts  flex-column justify-content-center align-items-center" >
+           
+               
+                <textarea [(ngModel)]="currdesc" class="h-75 w-75 bg-secondary-subtle rounded-5 p-3" placeholder="Enter desc">
+               
+                </textarea>
+        
+           
+          
+        </div>
+
+      </div>
+      <div class=" d-flex flex-row justify-content-center align-items-center dp bg-white rounded-bottom-5">
+      
+
+       <button class="btn  w-75 h-55" [ngStyle]="{backgroundColor:'#F97316', color:'white'}" (click)="submit()">Update</button>
+
+
+  </div>
+
+ 
+
+</div>
+</div>
+<ng-container *ngIf="err">
+    <div class="alert alert-danger position-absolute bottom-0 custom-alert text-nowrap">
+    {{err}}
+    </div>
+ </ng-container>
+ <ng-container *ngIf="updated">
+     <div class="alert alert-success position-absolute bottom-0 custom-alert text-nowrap" >
+         {{updated}}
+     </div>
+  </ng-container>

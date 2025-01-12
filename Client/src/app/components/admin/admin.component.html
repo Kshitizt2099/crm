@@ -1,0 +1,88 @@
+
+<div class="bg-background  d-flex flex-row justify-content-center align-items-center">
+
+
+
+    <div class="row rounded-5 d-flex flex-row" [ngStyle]="{height:'80%', width:'70%', backgroundColor:'white'}">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6  rounded-start-5 position-relative">
+                   
+            <div class="position-absolute"  [ngStyle]="{top:'10%', left:'20%'}"> 
+                <h2 class="title">Employee Login</h2>
+            </div>
+            
+           
+            <div class="h-100 w-100 d-flex flex-column position-absolute" [ngStyle]="{top:'30%',left:'5%'}">
+                <input [(ngModel)]="username" class="form-control  p-2  " [ngStyle]="{width:'85%'}" placeholder="Enter your username">
+
+                <div class="flex flex-row position-relative">
+                    <input [(ngModel)]="password" [type]="type?'text':'password'"  class="form-control  p-2  " [ngStyle]="{width:'85%'}" placeholder="Enter your password">
+                    <img src="https://cdn-icons-png.flaticon.com/256/8275/8275674.png" class="position-absolute" [ngStyle]="{height:'32px', width:'32px',top:0, right:'15%'}"  (click)="viewpass()">
+                </div>
+
+
+
+
+
+
+
+                <div class="position-absolute  w-100 " [ngStyle]="{left:'15%', top:'30%'}" >
+                    <button class=" title bg-primary p-2 text-light border-0 rounded-5 fs-4" (click)="adhome()" [ngStyle]="{height:'40%', width:'55%'}">Login</button>
+                </div>
+              
+            </div>
+             
+            <ng-container *ngIf="err">
+             <div class="position-absolute alert alert-danger w-75 rounded-5 text-center text-nowrap" style="bottom: 10%; left: 10%;">
+                  {{err}} 
+             </div>
+            </ng-container>
+            <a href="/"><div class=" position-absolute  text-dark cursor-pointer"  [ngStyle]="{left:'35%', bottom:'5%'}">
+                <h5 class="title">Back to user</h5>
+         </div></a>
+
+        </div>
+
+        <div class="col-lg-6 rightpart position-relative">
+            <img src="https://sales.webtel.in/images/Login-page-character1.png" class="img-fluid h-75 w-100 position-absolute" [ngStyle]="{top:'10%'}">
+        </div>
+
+        
+    </div>
+
+    <!-- <div class="h-[550px] w-[80%] absolute bg-white top-[15%] left-[10%] flex flex-row rounded-3xl">
+        <div class="h-[100%] w-[40%] rounded-l-3xl relative">
+            <div class="absolute top-20 title left-32">
+                <h1 class="text-3xl ">Admin Login</h1>
+                
+               </div>
+              
+               <div class="flex flex-col absolute top-44 left-10">
+                   <input class="w-96 p-2 border-b-2 border-b-gray-600 outline-none text-gray-500" placeholder="Enter your name">
+                   <br/>
+                   <div class="flex flex-row relative">
+                       <input [type]="type?'text':'password'"  class="w-[385px] p-2 border-b-2 border-b-gray-600 outline-none text-gray-500" placeholder="Enter your password">
+                       <img src="https://cdn-icons-png.flaticon.com/256/8275/8275674.png" class="h-8 w-8 absolute top-3 right-0" (click)="viewpass()">
+                   </div>
+                   
+               </div>
+        </div>
+        <div class="h-[100%] w-[60%] relative">
+            <div class="title absolute left-[35%] top-10">
+               
+            </div>
+           <img src="https://sales.webtel.in/images/Login-page-character1.png" class="mt-20">
+        </div>
+
+        <div class="absolute bottom-40 left-[95px]" >
+            <button class=" title bg-blue-600 w-72 h-14 p-2 text-center  text-xl text-white font-medium rounded-full" (click)="adhome()">Login</button>
+        </div>
+ 
+
+        <a href="/"><div class=" absolute bottom-20 left-[15%] cursor-pointer">
+            Back to user
+     </div></a>
+    </div> -->
+
+   
+
+</div>

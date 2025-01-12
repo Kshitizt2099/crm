@@ -1,0 +1,31 @@
+.bg-background{
+  background: linear-gradient(45deg,#D9F99D,#60A5FA,#2563EB);
+  height: 100vh;
+  width: 100vw;
+}
+.title{
+  font-family: "Playwrite DK Uloopet", cursive;
+  font-optical-sizing: auto;
+  font-weight:100px;
+  font-style: normal;
+  
+}
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: black;
+  border-right: 0px;
+}
+input{
+  border-bottom: 2px solid black;
+  border-top: 0px;
+  border-left: 0px;
+  margin-bottom: 20px;
+  border-right: 0px;
+}
+@media( max-width:992px)
+{
+   .rightpart{
+    display:none
+   }
+}

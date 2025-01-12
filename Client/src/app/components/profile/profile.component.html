@@ -1,0 +1,71 @@
+<app-navbar></app-navbar>
+
+
+<div style="height: 100vh; width: 100vw;" class="d-flex flex-row justify-content-center align-items-center position-relative">
+    <div class="position-absolute  h-25 w-100 top-0 d-flex justify-content-center align-items-center " style="z-index:0; background-color: #f59e0b">
+        <ng-container *ngIf='err'>
+          <div class="alert alert-danger">
+                
+           {{err}}
+        </div>
+
+        </ng-container>
+        <ng-container *ngIf='edited'>
+            <div class="alert alert-success">
+                  
+             {{edited}}
+          </div>
+  
+          </ng-container>
+    </div>
+    <div class="main z-1 shadow-lg">
+      <div class="h-100 w-50  d-flex flex-column col justify-content-evenly align-items-center">
+          <div class="d-flex flex-row">
+              Name:<h5>{{user.name}}</h5>
+          </div>
+
+
+          <div class="d-flex flex-row">
+            UserName:<h5>{{user.username}}</h5>
+        </div>
+    
+        <div class="d-flex flex-row">
+          Joined:{{user.createdAt.substring(0,10)}}
+        </div>
+
+        <div class="d-flex flex-row">
+          Email: {{user.email}}
+        </div>
+      </div>
+
+      <div class="h-100 w-50 bg-warning-subtle d-flex flex-column col justify-content-center align-items-center">
+
+      
+        <div class="d-flex flex-column justify-content-evenly w-100 align-items-center ">
+            <div class="d-flex flex-column mb-lg-5 mb-3 mb-md-3 md-sm-3 w-100 align-items-center justify-content-between">
+                <div class="d-flex flex-column justify-content-center align-items-center w-100">
+                    <label> Enter old password</label>
+                    <input class="w-75 mb-3 p-2 rounded-5" [(ngModel)]="oldpassword">
+                </div>
+                <div class="d-flex flex-column justify-content-center align-items-center w-100">
+                    <label> Enter new password</label>
+                    <input class="w-75 mb-3 p-2 rounded-5" [(ngModel)]="password">
+                </div>
+                
+                
+            </div>
+          
+
+
+            <div class="mb-3">
+                <button class="btn text-light" style="background-color: #f59e0b;" (click)="editpassword()">Change password</button>
+            </div>
+           
+
+        </div>
+       
+
+    </div>
+    </div>
+
+</div>

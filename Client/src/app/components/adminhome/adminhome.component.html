@@ -1,0 +1,92 @@
+<div class="adminnav d-flex flex-row row shadow-lg">
+    
+        <div class=" col-6 col-sm-6 col-md-3 col-lg-3 bg-danger text-center text-white title">
+        <div class="fs-4">{{emp_name}}</div>
+        </div>
+    
+        <div class="routes col-md-9 col-lg-9 ">
+          <div class="h-100 w-100 bg-light d-flex flex-row justify-content-evenly">
+             
+              <img  (click)="goOrders()" src="https://cdn-icons-png.flaticon.com/256/724/724933.png" [ngStyle]="{height:'35px',width:'35px',cursor:'pointer'}">
+
+              <img (click)="goImports()" src="https://cdn-icons-png.flaticon.com/256/3097/3097412.png" [ngStyle]="{height:'35px',width:'35px',cursor:'pointer'}">
+
+              <div class="d-flex flex-row"> 
+                
+                <img (click)="goSupport()" [ngStyle]="{height:'35px',width:'35px',cursor:'pointer'}" src="https://cdn-icons-png.flaticon.com/256/3472/3472688.png">
+                <div class="bg-danger rounded-5 text-center text-white ms-0" style="height:32px; width: 32px;">
+                  <div class="mt-1">{{pdlength}}</div>                 
+                </div>
+              </div>
+             
+
+              <img (click)="logout()" [ngStyle]="{height:'35px',width:'35px',cursor:'pointer'}" src="https://cdn-icons-png.flaticon.com/256/992/992680.png">
+          </div>
+        </div>
+        <div class="ham col-sm-6 col-6 bg-light position-relative">
+          <div class="position-absolute end-0" style="top: 15%; cursor: pointer;">
+
+            <img src="https://cdn-icons-png.flaticon.com/256/9091/9091427.png" [ngStyle]="{'height':'32px','width':'32px'}" (click)="setmobileview()" *ngIf="!mobileview">
+            <img src="https://cdn-icons-png.flaticon.com/256/2976/2976286.png" [ngStyle]="{'height':'2rem', 'width':'2rem'}" (click)="setmobileview()" *ngIf="mobileview" class="cross">  
+
+          </div>
+         
+        </div>
+        
+   
+   
+</div>
+
+<ng-container  *ngIf="mobileview">
+    <div class="mobile loading d-flex flex-column justify-content-evenly align-items-center ">
+       
+        
+        <div (click)="goOrders()" style="cursor: pointer;" class="d-flex flex-column position-relative justify-content-center align-items-center shadow-lg rounded-2" style="height: 100px; width: 100px;">
+          <img src="https://cdn-icons-png.flaticon.com/256/724/724933.png" [ngStyle]="{height:'55px',width:'55px',cursor:'pointer'}">
+            <div>
+              Downloads
+            </div> 
+         </div>
+    
+         <div (click)="goImports()" style="cursor: pointer;" class="d-flex flex-column position-relative justify-content-center align-items-center shadow-lg rounded-2" style="height: 100px; width: 100px;">
+          <img src="https://cdn-icons-png.flaticon.com/256/3097/3097412.png" [ngStyle]="{height:'55px',width:'55px',cursor:'pointer'}">
+          <div>
+            Uploads
+          </div>   
+         
+         </div>
+    
+         <div (click)="goSupport()" style="cursor: pointer;" class="d-flex flex-column position-relative justify-content-center align-items-center shadow-lg rounded-2" style="height: 100px; width: 100px;">
+          <img src="https://cdn-icons-png.flaticon.com/256/3472/3472688.png" [ngStyle]="{height:'55px',width:'55px',cursor:'pointer'}">
+          <div>
+            tickets
+          </div>  
+         
+         </div>
+
+         <div (click)="logout()" style="cursor: pointer;" class="d-flex flex-column position-relative justify-content-center align-items-center shadow-lg rounded-2" style="height: 100px; width: 100px;">
+          <img src="https://cdn-icons-png.flaticon.com/256/992/992680.png" [ngStyle]="{height:'55px',width:'55px',cursor:'pointer'}">
+          <div>
+            Logout
+          </div>
+         
+         </div>
+
+    </div>
+     
+</ng-container>
+<div>
+  <ng-container *ngIf="orders">
+   <app-download></app-download>
+  </ng-container>
+
+  <ng-container *ngIf="support">
+    <app-tickets></app-tickets>
+  </ng-container>
+
+  <ng-container *ngIf="imports">
+    <app-upload></app-upload>
+  </ng-container>
+
+
+</div>

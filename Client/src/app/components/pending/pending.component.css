@@ -1,0 +1,17 @@
+.pending{
+    width: 100vw;
+    height: 100vh;
+}
+@media (max-width:600px)
+{
+    .cat{
+        display: none;
+    }
+
+    .type{
+        display: none;
+    }
+    .desc{
+        display: none;
+    }
+}

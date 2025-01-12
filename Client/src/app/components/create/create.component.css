@@ -1,0 +1,95 @@
+.create{
+    width: 35%;
+    height: 90%;
+    top:5%;
+    left:30%;
+    box-shadow: 10% black;
+}
+@media (max-width:900px)
+{
+    .create{
+        background-color: black;
+        height: 100%;
+        width: 100%;
+        top:0;
+        bottom: 0%;
+        left: 0;
+        right: 0
+    }
+}
+
+/* .left{
+    height: 100vh;
+    width:45%;
+    background: linear-gradient(135deg,green,white,lime);
+}
+
+.right{
+    height: 100%;
+    width: 55%;
+}
+
+.bg-light-secondary{
+    background-color: beige;
+}
+
+@media screen and (max-width:768px){
+
+    .bg-light-secondary{
+        background-color: darkblue;
+    }
+    /* .left{
+        display: none;
+     
+    }
+
+    
+
+    .right{
+        width: 100%;
+    } */
+
+    .cont{
+        background: linear-gradient(135deg,red,#4ade80,orange);
+    }
+   .ips{
+    height:500px; width:500px
+   }
+  
+ 
+@media (max-width:992px)
+{
+    .cont{
+        display:none;
+    }
+
+    .bgs{
+        background: linear-gradient(45deg,red,#34d399,orange);
+    }
+
+     .name,.email,.pass{
+         width: 378px;
+     }
+     .ips{
+         background: white;
+     }
+    
+}
+
+@media (min-width:100px) and (max-width:407px)
+{
+    .ips{
+       height: 300px;
+       width: 100%;
+
+    }
+    .bgs{
+        width:100vw;
+        height:100vh
+    }
+.name,.email,.pass{
+      width: 200px;
+      margin-left: 100px;
+}
+}
+  

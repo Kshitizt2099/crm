@@ -1,0 +1,71 @@
+<app-navbar></app-navbar>
+<div class="pending bg-info-subtle position-relative" style="height:100vh;">
+  
+  <ng-container *ngIf="tickets.length>0; else notif" class="position-absolute">
+    <div style="height: 5%;" class="w-100 position-relative" >
+    
+    
+    </div>
+   <div *ngFor="let ticket of tickets" >
+    
+    <div class="row" style="height: 50px; margin-bottom:15px;">
+        <div class="col-6 col-sm-6 col-md-6 col-lg-6 bg-white d-flex flex-column">
+        <div style="height: 15%; width: 105%;" [ngClass]="{'bg-danger':ticket.type=='Appliaction Support','bg-success':ticket.type=='Platform Support','bg-warning':ticket.type=='Customer Service'}">
+
+        </div>
+         <div style="height:90%;" class=" d-flex flex-row justify-content-evenly align-items-center">
+            <div>
+                <ng-container *ngIf="ticket.description.length>10 else normal">
+                  Desc:{{ticket.description.substring(0,5)}}...
+                </ng-container>
+                <ng-template #normal>
+                Desc:{{ticket.description}}
+                   
+                </ng-template>
+
+            </div>
+  
+            <div class="type">
+              type:{{ticket.type}}
+          </div>
+
+           <div class="desc">
+               status:{{ticket.status}}
+           </div>
+
+         </div> 
+          
+      
+       
+          
+        </div>
+   
+        <div class="col-6 col-sm-6 col-md-6 col-lg-6 bg-white">
+            <div style="height: 15%; width: 105%; margin-left: -2%;" [ngClass]="{'bg-danger-subtle':ticket.type=='Application Support','bg-success-subtle':ticket.type=='Platform Support','bg-warning-subtle':ticket.type=='Customer Service'}" >
+
+            </div>
+             <div style="height:90%;" class=" d-flex flex-row justify-content-evenly align-items-center">
+               <div class="cat">
+                 Category:{{ticket.category}}
+              </div>
+              <div>
+                <img src="https://cdn-icons-png.flaticon.com/256/1828/1828665.png" style="height: 32px;" (click)="delete(ticket.ticket_id)">
+             </div>
+             <div> <img src="https://cdn-icons-png.flaticon.com/256/7773/7773134.png" style="height: 32px;" (click)="editdetails(ticket.ticket_id)">
+               
+             </div>
+    
+             </div> 
+   
+   
+       </div>
+    </div>
+    
+   
+   </div>
+
+  </ng-container>
+  <ng-template #notif> 
+    <app-notickets></app-notickets>
+  </ng-template>
+</div>

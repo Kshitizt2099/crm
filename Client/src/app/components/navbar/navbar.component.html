@@ -1,0 +1,142 @@
+<div class="row bg-white border border-dark" [ngStyle]="{height:'8vh'}">
+  <div class="col-6 col-sm-6 col-md-1 col-lg-1 position-relative ">
+     <a href="/products"><h6 class="title position-absolute cursor-pointer " style="top:30%; left:10%; cursor: pointer;">CRM</h6></a>
+  </div>
+
+   <div class="col-md-11 col-lg-11 d-flex flex-row justify-content-sm-evenly align-items-center large">
+    
+      <div  class="position-relative"  style="width: 50px; height: 50px;"> 
+        <ng-container *ngIf="notifslength>0">
+          <div class="bg-danger text-light d-flex flex-row rounded-5 justify-content-lg-center align-items-center position-absolute" style="height:32px;width:32px; right:0%; top: 0%; z-index:1 ;">
+            {{notifslength}}
+          </div>
+
+        </ng-container>
+
+        <div class="position-absolute" style="top:20%">
+          <a href="/resolved"><img src="https://cdn-icons-png.flaticon.com/256/2645/2645890.png" [ngStyle]="{height:'32px',width:'32px',cursor:'pointer'}"></a>
+        </div>
+      
+      </div>
+
+      <div class="d-flex flex-row position-relative " style="width: 50px; height: 50px;">
+        <ng-container *ngIf="pendinglength>0">
+          <div class="bg-danger text-light d-flex flex-row rounded-5 justify-content-lg-center align-items-center position-absolute" style="height:32px;width:32px; right:0%; top: 0%; z-index:1 ;">
+            {{pendinglength}}
+          </div>
+
+        </ng-container>
+      
+        <div class="position-absolute" style="top:20%">
+          <a href="/pending"><img src="https://cdn-icons-png.flaticon.com/256/1436/1436756.png" [ngStyle]="{height:'32px',width:'32px',cursor:'pointer'}"></a>
+        </div>
+
+      </div>
+
+      <div >
+        
+        <a href="/completed"><img src="https://cdn-icons-png.flaticon.com/256/6071/6071263.png" [ngStyle]="{height:'32px',width:'32px',marginTop:'-10px',cursor:'pointer'}"></a>
+      </div>
+      <div>
+        <a href="/profile"><img src="https://cdn-icons-png.flaticon.com/256/64/64572.png" [ngStyle]="{height:'32px',width:'32px',marginTop:'-10px',cursor:'pointer'}"></a>
+ 
+       </div>
+      <div>
+        <a href="/"><img src="https://cdn-icons-png.flaticon.com/256/16470/16470754.png" [ngStyle]="{height:'32px',width:'32px',marginTop:'-10px',cursor:'pointer'}"></a>
+ 
+       </div>
+      
+   </div>
+
+   <div class="col-md-11 col-6 col-sm-6 mobile position-relative "  >
+    <img src="https://cdn-icons-png.flaticon.com/256/9091/9091427.png" class="position-absolute" [ngStyle]="{'height':'32px','width':'32px',right:'5%', top:'5%'}" (click)="setmobileview()"  *ngIf="!mobileview">
+    <img src="https://cdn-icons-png.flaticon.com/256/2976/2976286.png" class="position-absolute cross" [ngStyle]="{'height':'30px', 'width':'30px',right:'5%', top:'5%'}" (click)="setmobileview()" style="margin-right: 0%;" *ngIf="mobileview" >  
+  </div>
+
+  
+</div>
+
+<ng-container *ngIf="mobileview">
+  <div class="container-fluid bgback d-flex flex-column align-items-center justify-content-center loading" style="height: 100vh;">
+      <div class="d-flex flex-row position-relative  mb-2" style="height: 5%; width: 50%; cursor: pointer;" (click)="gopending()">
+        <div class="position-absolute" style="left:7%;">
+          <a href="/pending"><img src="https://cdn-icons-png.flaticon.com/256/1436/1436756.png" [ngStyle]="{height:'32px',width:'32px',cursor:'pointer', left:'20px'}"></a>
+          
+        </div>
+        <ng-container *ngIf="pendinglength">
+          <div class="bg-danger text-light d-flex flex-row rounded-5 justify-content-center align-items-center position-absolute" style="height:32px;width:32px; right:0%;z-index:1 ;">
+            {{pendinglength}}
+          </div>
+        </ng-container>
+       
+       
+
+        <div class="position-absolute" style="top:10%; left:25%">
+          <h4>Pending</h4>
+        </div>
+      </div> 
+
+
+      <div class="d-flex flex-row position-relative mb-2" style="height: 5%; width: 50%; cursor: pointer;" (click)="goresolved()">
+        <div class="position-absolute" style="left:5%;">
+          <a href="/resolved"><img src="https://cdn-icons-png.flaticon.com/256/2645/2645890.png" [ngStyle]="{height:'32px',width:'32px',cursor:'pointer', left:'20px'}"></a>
+          
+        </div>
+        
+        <ng-container *ngIf="notifslength">
+          <div class="bg-danger text-light d-flex flex-row rounded-5 justify-content-center align-items-center position-absolute" style="height:32px;width:32px; right:10%; z-index:1 ;">
+            {{notifslength}}
+          </div>
+        </ng-container>
+       
+
+        <div class="position-absolute" style="top:10%; left:25%">
+          <h4>Notifications</h4>
+        </div>
+     </div> 
+
+     <div class="d-flex flex-row position-relative  mb-2" style="height: 5%; width: 50%; cursor: pointer;" (click)="gocompleted()">
+      <div class="position-absolute" style="left:5%;">
+        <a href="/completed"><img src="https://cdn-icons-png.flaticon.com/256/6071/6071263.png" [ngStyle]="{height:'32px',width:'32px',cursor:'pointer',right:'0%'}"></a>
+        
+      </div>
+     
+     
+     
+
+      <div class="position-absolute" style="top:10%; left:25%">
+        <h4>Completed</h4>
+      </div>
+   </div> 
+
+
+   <div class="d-flex flex-row position-relative  mb-2" style="height: 5%; width: 50%; cursor: pointer;" (click)="goprofile()">
+    <div class="position-absolute" style="left:5%;">
+      <a href="/profile"><img src="https://cdn-icons-png.flaticon.com/256/64/64572.png" [ngStyle]="{height:'32px',width:'32px',cursor:'pointer'}"></a>
+      
+    </div>
+    
+    
+   
+
+    <div class="position-absolute" style="top:10%; left:25%">
+      <h4>Profile</h4>
+    </div>
+ </div> 
+
+ <div class="d-flex flex-row position-relative  mb-2" style="height: 5%; width: 50%; cursor: pointer;" (click)="gologout()">
+  <div class="position-absolute" style="left:5%;">
+    <a href="/profile"><img src="https://cdn-icons-png.flaticon.com/256/16470/16470754.png" [ngStyle]="{height:'32px',width:'32px',cursor:'pointer'}"></a>
+    
+  </div>
+  
+  
+ 
+
+  <div class="position-absolute" style="top:10%; left:25%">
+    <h4>logout</h4>
+  </div>
+</div> 
+      
+  </div>
+</ng-container>

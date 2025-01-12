@@ -1,0 +1,129 @@
+.typecont{
+    width: 500px;
+    height: 500px;
+    background-color: blanchedalmond;
+    border: 5px solid transparent;
+  border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+  border-image-slice: 1;
+    position: relative;
+    box-shadow: 
+    0 0 10px rgba(255, 0, 0, 0.5), /* Red */
+    0 0 20px rgba(255, 127, 0, 0.5), /* Orange */
+    0 0 30px rgba(255, 255, 0, 0.5), /* Yellow */
+    0 0 40px rgba(0, 255, 0, 0.5), /* Green */
+    0 0 50px rgba(0, 0, 255, 0.5), /* Blue */
+    0 0 60px rgba(75, 0, 130, 0.5), /* Indigo */
+    0 0 70px rgba(148, 0, 211, 0.5); /* Violet */
+
+    
+
+}
+.bg-back
+{
+  background:url("https://img.freepik.com/free-vector/abstract-technological-background_23-2148897676.jpg?w=1800&t=st=1723106260~exp=1723106860~hmac=ed1e22288129e9839065d113818ac5aa218342aa9b95acc8d43d7758b70dfd4c")
+}
+.din{
+  animation-name: dropin;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+}
+
+.scrollview{
+  animation-name: uponscroll;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+}
+.raisecont{
+  height: fit-content;
+}
+.rainbow{
+  border: 5px solid transparent;
+  border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+  border-image-slice: 1;
+}
+
+.details{
+  visibility: hidden;
+}
+.title{
+     
+  font-family: "Playwrite RO", cursive;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+
+}
+
+@keyframes dropin {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+
+.heading {
+  font-family: "Timmana", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (max-width:992px)
+{
+  .desc{
+      display: none !important;
+  }
+  .mobileview{
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      align-items: center;
+  }
+  .mobilerow{
+    position: relative;
+     width: 50% !important;
+     min-width: 300px;
+     border: 10px solid transparent;
+     border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+     border-image-slice: 1;
+     cursor: pointer;
+    
+    
+    }
+
+    .details{
+      position:absolute;
+      height: 100%;
+      width: 100%;
+      left: 525%;
+      top:0%;
+      background-color: transparent;
+      transition: left 0.2s linear, visibility 1s ease-in;
+      background-color:black;
+      color: white;
+      visibility: hidden;
+    }
+
+    .mobilerow:hover .details{
+     
+      left:0%;
+      
+      visibility: visible;
+    
+    } 
+
+    
+      
+
+
+
+  
+}
+

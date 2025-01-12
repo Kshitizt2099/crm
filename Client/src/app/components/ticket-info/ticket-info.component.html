@@ -1,0 +1,63 @@
+
+
+<app-navbar></app-navbar>
+<div class="container-fluid bg-danger position-relative d-flex flex-row justify-content-center align-items-center" [ngStyle]="{height:'100vh',minHeight:'100vh', minWidth:'300px'}">
+    
+
+    <div class="row bg-white position-absolute rounded-5" style="height: 85vh; width:40%; min-width: 300px;">
+       <div class="col bg-light h-100 rounded-5 d-flex flex-column position-relative">
+          <div class="position-absolute services text-center h-100 w-100" [ngStyle]="{top:'40px'}">
+            
+              <h4 style="margin-left: -63%;"> {{type}}</h4>
+          
+           
+          </div>
+
+          <div class="position-absolute w-100" [ngStyle]="{top:'20%', height:'20%'}">
+              <div class="h-100 w-100 " style="top: 0%;">
+                <div class="row w-100">
+                  <div class="col-12 col-sm-12 container-md-12 col-lg-12 col-xl-12 d-flex justify-content-center align-items-center">
+                     Type of request
+                  </div>
+                </div>
+                <br>
+                <select [(ngModel)]="category" class="outline rounded-5 position-absolute outline:none" style="width: 80%; height: 40px; left: 8%; top: 35%;">
+                    <option *ngFor="let service of services">
+                        {{service}}
+                    </option>
+                </select>
+
+              </div>
+
+              <div class="position-absolute d-flex flex-column " style="top: 80%; left: 5% ;width:80%;"> 
+                <div class="row w-100">
+                    <div class="col-12 col-sm-12 container-md-12 col-lg-12 col-xl-12 d-flex align-items-center justify-content-center ">
+                        <span style="margin-left: 15%;">Description Of issue</span>
+                    </div>
+                  </div>
+               
+                <textarea [(ngModel)]="desc" class=" outline rounded-5 ms-3 mt-1 p-5 "  required></textarea>
+    
+            </div>
+
+            <button class="btn btn-danger position-absolute services " style="bottom:-200%;" (click)="raiseticket()">
+                 Raise ticket
+            </button>
+            <ng-container *ngIf="err">
+                <div class="alert alert-danger w-75 " style="bottom:-210%; left: 10%;">
+                    {{err}}
+                </div>
+            </ng-container>
+
+            <ng-container *ngIf="raised">
+                <div class="alert alert-success w-75 " style="bottom:-210%; left: 10%;">
+               {{raised}}
+                </div>
+            </ng-container>
+              
+             
+        </div>
+       </div>
+    </div>
+
+</div>

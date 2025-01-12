@@ -1,0 +1,179 @@
+<app-navbar></app-navbar>
+<!-- <div class=" d-flex flex-row align-items-center justify-content-center" style="height: 100vh; width: 100vw; background-color">
+   <div class="typecont">
+
+    <a href="tinfo/type1">type1</a>
+    <a href="tinfo/type2">type2</a>
+    <a href="tinfo/type2">type3</a>
+
+   </div>
+</div> -->
+<div class="container-fluid bg-back overflow-auto" style="height: 200vh; position: relative;">
+   <div class="position-absolute  bg-white w-100 din" style="height: 35%; top:3% ;left:0%">
+      <div class="h-100 w-100 z-0 position-relative">
+         <img class="h-100 w-100" src="https://www.pandasecurity.com/en/mediacenter/src/uploads/2019/10/pandasecurity-panda-tech-support.jpg">
+      </div>
+      <div class="z-1 h-100 w-100 text-white position-absolute top-50">
+        <h2 class="title">Welcome to CRM Management System</h2>
+      </div>
+      
+   </div>
+   <div class="h-100 w-100 d-flex flex-column justify-content-evenly mobileview position-absolute" style="top: 35%;">
+      
+      <div class="row w-100 rainbow bg-primary-subtle  mobilerow scrollview" style="height:20%">
+         <div class="col-lg-9 col-xl-9 desc bg-danger-subtle title d-flex flex-column align-items-center justify-content-center position-relative">
+            <div class="heading position-absolute  bg-danger text-white h-25 w-100 top-0">
+               <h1 class="position-absolute start-0 text-nowrap">Appliaction Support</h1>
+            </div>
+            <div class="h-25  w-100 " >
+               <p class="fs-5">Managing and maintaining software applications to ensure they function effectively and meet users' needs</p>
+            </div>
+            <div style="width: 50%" class="position-absolute bottom-0 start-0">
+               <button class="btn btn-danger w-75 title" (click)="raise('Type1')">Raise</button>
+            </div>
+
+         </div>
+         <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 bg-warning position-relative">
+            <div class="position-absolute top-0 start-0 end-0 bottom-0 bg-white">
+               <img class="h-100 w-100" src="https://c0.wallpaperflare.com/preview/379/493/189/concept-development-device-flat.jpg">
+            </div>
+            <div class="details">
+               <div class="h-100 w-100 d-flex flex-column justify-content-center align-items-center">
+                  <div class="title">
+                    <h5>Appliaction Support</h5>
+                  </div>
+                  <div class="h-75 w-75  title  " >
+                   <p>
+                     Managing and maintaining software applications to ensure they function effectively and meet users' needs
+                  </p>                  
+               </div>
+                   
+               <div class="w-75 position-relative h-25">
+                  <button class="btn btn-danger position-absolute" style="top:0%; left:35%" (click)="raise('Type1')" >Raise</button>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+      </div>
+
+
+      <div class="row w-100 rainbow bg-primary-subtle mobilerow scrollview" style="height:20%">
+         <div class="col-lg-9 col-xl-9 desc bg-success-subtle d-flex flex-column align-items-center justify-content-center position-relative">
+            <div class="heading position-absolute  bg-success text-white border-2 border-primary h-25 w-100 top-0">
+               <h1 class="position-absolute start-0 text-nowrap " style="top: 12%;">Platform Support</h1>
+            </div>
+            <div class="h-25  w-100 title " >
+               <p class="fs-5">Managing, maintaining, and optimizing technology platforms to ensure they operate effectively and meet organizational needs.</p>
+            </div>
+            <div style="width: 50%" class="position-absolute bottom-0 start-0">
+               <button class="btn btn-success w-75 title" (click)="raise('Type2')">Raise</button>
+            </div>
+
+         </div>
+         <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 bg-warning position-relative">
+
+            <div class="position-absolute top-0 start-0 end-0 bottom-0 bg-white">
+              <img class="h-100 w-100" src="https://thumbs.dreamstime.com/b/smartphone-mobile-phone-ringing-calling-vector-illustration-flat-cartoon-black-cellphone-call-vibrate-contact-info-110366791.jpg">
+            </div>
+            <div class="details">
+               <div class="h-100 w-100 d-flex flex-column justify-content-center align-items-center">
+                  <div class="title">
+                    <h5>Platform Support</h5>
+                  </div>
+                  <div class="h-75 w-75 tab-content title" >
+                     Managing, maintaining, and optimizing technology platforms to ensure they operate effectively and meet organizational needs.
+                  </div>
+                  <div class="w-75 position-relative h-25">
+                     <button class="btn btn-success position-absolute" style="top:-25%; left:35%" (click)="raise('Type2')" >Raise</button>
+                     </div>
+               </div>
+            </div>
+
+         </div>
+      </div>
+
+
+      <div class="row w-100 rainbow bg-primary-subtle mobilerow scrollview" style="height:20%">
+         <div class="col-lg-9 col-xl-9 desc bg-warning-subtle d-flex flex-column align-items-center justify-content-center position-relative">
+            <div class="heading position-absolute  bg-warning text-white border-2 border-primary h-25 w-100 top-0 ">
+               <h1 class="position-absolute start-0 text-nowrap" style="top: 12%;">Customer Service</h1>
+            </div>
+            <div class="h-25  w-100  title" >
+               <p class="fs-5">Support and assistance provided to customers before, during, and after a purchase to ensure a positive experience</p>
+            </div>
+            <div style="width: 50%" class="position-absolute bottom-0 start-0">
+               <button class="btn btn-warning w-75 title" (click)="raise('Type3')">Raise</button>
+            </div>
+
+         </div>
+         <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 bg-warning position-relative">
+
+            <div class="position-absolute top-0 start-0 end-0 bottom-0 bg-white">
+              <img class="h-100 w-100" src="https://static.helpjuice.com/helpjuice_production/uploads/upload/image/4752/direct/1585157958423-Customer%20Support.png">
+            </div>
+            <div class="details">
+               <div class="h-100 w-100 d-flex flex-column justify-content-center align-items-center">
+                  <div class="title">
+                    <h5>Customer Service</h5>
+                  </div>
+                  <div class="h-75 w-75 tab-content title" >
+                     Support and assistance provided to customers before, during, and after a purchase to ensure a positive experience
+                  </div>
+                  <div class="w-75 position-relative h-25">
+                     <button class="btn btn-warning position-absolute" style="top:0%; left:35%" (click)="raise('Type3')" >Raise</button>
+                     </div>
+               </div>
+            </div>
+
+         </div>
+      </div>
+
+
+      <!-- <div class="row w-100 rainbow bg-primary-subtle mobilerow scrollview" style="height:20%">
+         <div class="col-lg-9 col-xl-9 desc bg-secondary d-flex flex-column align-items-center justify-content-center position-relative">
+            <div class="title position-absolute border border-2 border-primary h-25 w-100 top-0">
+               <h1 class="position-absolute start-0 text-nowrap">Type 3</h1>
+            </div>
+            <div class="h-25  w-100 border border-2 border-danger " >
+               <p class="fs-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur voluptate illum culpa quod sequi accusantium.</p>
+            </div>
+            <div style="width: 50%" class="position-absolute bottom-0 start-0">
+               <button class="btn btn-danger w-75 title" (click)="raise('Type3')">Raise</button>
+            </div>
+
+         </div>
+         <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 bg-warning position-relative">
+            <div class="position-absolute top-0 start-0 end-0 bottom-0 bg-white">
+               <img class="h-100 w-100" src="https://media.istockphoto.com/id/1443287362/photo/woman-hiking-in-mountains-on-the-background-of-lysefjorden.webp?s=1024x1024&w=is&k=20&c=SfJhXF81MvbZ2kAdc5tBYR9C7Xs4tmGY2GuRQr_FhDs=">
+            </div>
+            <div class="details">
+               <div class="h-100 w-100 d-flex flex-column justify-content-center align-items-center">
+                  <div class="title">
+                    <h5>Type3</h5>
+                  </div>
+
+                  <div class="h-75 w-75 tab-content title" >
+                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur voluptate illum culpa quod sequi accusantium.
+                  </div>
+
+                  <div class="w-75 position-relative h-25">
+                  <button class="btn btn-danger position-absolute" style="top:0%; left:35%" (click)="raise('Type3')" >Raise</button>
+                  </div>
+                
+               </div>
+
+            </div>
+
+         </div>
+
+      </div> -->
+   
+   
+   </div>
+
+</div>
+
+
+
+

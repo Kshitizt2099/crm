@@ -1,0 +1,90 @@
+<app-navbar></app-navbar>
+
+
+
+<div class="pending bg-primary-subtle position-relative" style="height:100vh;">
+   
+  <ng-container *ngIf="notifs.length>0 else notif" class="position-absolute">
+    <div style="height: 5%;" class="w-100 position-relative" >
+    
+    
+    </div>
+   <div *ngFor="let ticket of notifs let i= index" >
+    <div class="row" style="height: 50px; margin-bottom:15px;">
+        <div class="col-6 col-sm-6 col-md-6 col-lg-6 bg-white d-flex flex-column">
+        <div style="height: 15%; width: 105%;" [ngClass]="{'bg-danger':ticket.type=='Application Support' ,'bg-success':ticket.type=='Platform Support','bg-warning':ticket.type=='Customer Service'}">
+           
+
+        </div>
+         <div style="height:90%;" class=" d-flex flex-row justify-content-evenly align-items-center">
+            <div>
+                <ng-container *ngIf="ticket.description.length>10 else normal">
+                  Desc:{{ticket.description.substring(0,5)}}...
+                </ng-container>
+                <ng-template #normal>
+                Desc:{{ticket.description}}
+                   
+                </ng-template>
+
+            </div>
+  
+            <div class="type">
+              type:{{ticket.type}}
+          </div>
+
+           <div class="desc">
+               status:{{ticket.status}}
+           </div>
+
+         </div> 
+          
+      
+       
+          
+        </div>
+        
+   
+        <div class="col-6 col-sm-6 col-md-6 col-lg-6 bg-white">
+          <div style="height: 15%; width: 105%;"  [ngClass]="{'bg-danger-subtle':ticket.type=='Application Support','bg-success-subtle':ticket.type=='Platform Support','bg-warning-subtle':ticket.type=='Customer Service'}"  >
+
+          </div>
+             <div style="height:90%;" class=" d-flex flex-row justify-content-evenly align-items-center">
+              
+
+
+              <div>
+
+                
+               
+             </div>
+
+              <div>
+                By:{{ticket.updatedBy || 'John Doe'}}
+              </div>
+             <div class="d-flex flex-row  border-2 border-info border border-3 border-danger rating " style="height: 100%; cursor: pointer;">
+                <div  class="star" style="height:32px; width:32px; "  [ngClass]="{'bg-warning':star<=ticket.rating,'bg-secondary':star>ticket.rating}" *ngFor="let star of stars ">
+                   
+                </div> 
+            </div>
+             <div style="cursor: pointer;">
+                <img src="https://cdn-icons-png.flaticon.com/256/7773/7773134.png" style="height: 32px;" (click)="review(ticket.id)">
+             </div>
+
+
+    
+             </div> 
+   
+   
+       </div>
+    </div>
+    
+   
+   </div>
+
+  </ng-container>
+  <ng-template #notif> 
+    <app-notickets></app-notickets>
+ </ng-template>
+  
+</div>
+

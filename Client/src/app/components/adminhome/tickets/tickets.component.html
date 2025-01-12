@@ -1,0 +1,122 @@
+
+
+
+<div class="pending bg-warning position-relative" style="height:150vh; overflow: scroll;">
+   <div style="height: 15%;" class="w-100 position-relative" >
+     
+    <!-- <div class="container-fluid h-75 bg-white position-absolute d-flex flex-row justify-content-around align-items-center" style="top:15%">
+         
+       <div class="position-relative h-100 w-100 d-flex">
+        <div style="cursor: pointer; width: fit-content; " class=" position-absolute start-0 " (click)="Complete()">
+          <img src="https://cdn-icons-png.flaticon.com/256/11450/11450152.png" style="height: 80px; width:80px;">
+   </div>
+
+       
+   <div  style="cursor: pointer; width: fit-content" class=" position-absolute end-50  start-50" (click)="Pending()">
+    
+     <img src=" https://cdn-icons-png.flaticon.com/256/6814/6814082.png" style="height: 80px; width:80px;">
+</div>
+
+<div  style="cursor: pointer; width: fit-content" class=" position-absolute end-0 " (click)="All()">
+ <img src="https://cdn-icons-png.flaticon.com/256/16467/16467031.png" style="height: 80px; width:80px;">
+</div>
+
+       </div>
+     
+        
+    </div> -->
+    <div class="container-fluid h-75 bg-warning-subtle position-relative d-flex flex-row justify-content-around align-items-center" style="top:15%">
+      <div class="d-flex flex-row justify-content-around align-items-center w-100">
+          <div style="cursor: pointer; width: fit-content;" (click)="Complete()">
+              <img src="https://cdn-icons-png.flaticon.com/256/11450/11450152.png" class="icons">
+          </div>
+  
+          <div style="cursor: pointer; width: fit-content;" (click)="Pending()" >
+              <img src="https://cdn-icons-png.flaticon.com/256/6814/6814082.png" class="icons">
+          </div>
+  
+          <div style="cursor: pointer; width: fit-content;" (click)="All()" >
+              <img src="https://cdn-icons-png.flaticon.com/256/16467/16467031.png" class="icons">
+          </div>
+      </div>
+  </div>
+  
+    
+   </div>
+  <ng-container *ngIf="notifs.length>0; else notif" class="position-absolute">
+   <div *ngFor="let ticket of notifs let i= index" >
+    <div class="row" style="height: 50px; margin-bottom:15px;">
+        <div class="col-6 col-sm-6 col-md-6 col-lg-6 bg-white d-flex flex-column">
+        <div style="height: 15%; width: 105%;" class="bg-info">
+
+        </div>
+         <div style="height:90%;" class=" d-flex flex-row justify-content-evenly align-items-center">
+            <div>
+                <ng-container *ngIf="ticket.description.length>10 else normal">
+                  Desc:{{ticket.description.substring(0,5)}}...
+                </ng-container>
+                <ng-template #normal>
+                Desc:{{ticket.description}}
+                   
+                </ng-template>
+
+            </div>
+  
+            <div class="type">
+              type:{{ticket.type}}
+          </div>
+
+           <div class="desc">
+               status:{{ticket.status}}
+           </div>
+
+         </div> 
+          
+      
+       
+          
+        </div>
+   
+        <div class="col-6 col-sm-6 col-md-6 col-lg-6 bg-white">
+            <div style="height: 15%; width: 105%; margin-left: -2%;" class="bg-info">
+
+            </div>
+             <div style="height:90%;" class=" d-flex flex-row justify-content-evenly align-items-center">
+              
+                By:{{ticket.raisedBy || 'John Doe'}}
+
+              <div>
+
+                
+               
+             </div>
+
+
+            <ng-container *ngIf="ticket.status!='Open' else Open">
+              <div style="cursor: pointer;">
+                <img src="https://cdn-icons-png.flaticon.com/256/5290/5290109.png" style="height: 32px" >
+             </div>
+            </ng-container>
+            <ng-template #Open>
+              <div style="cursor: pointer;">
+                <img src="https://cdn-icons-png.flaticon.com/256/7773/7773134.png" style="height: 32px" (click)="viewdetails(ticket.id)">
+             </div>
+            </ng-template>
+            
+
+    
+             </div> 
+   
+   
+       </div>
+    </div>
+    
+   
+   </div>
+
+  </ng-container>
+  <ng-template #notif> 
+<app-noempt></app-noempt>
+
+ </ng-template>
+</div>
